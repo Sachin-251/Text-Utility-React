@@ -8,7 +8,7 @@ import About from './components/About';
 
 
 function App() {
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState('dark');
   const [alert, setAlert] = useState(null);
 
   const showAlert = (message) => {
@@ -21,12 +21,12 @@ function App() {
   }
 
   const toggleMode = () => {
-    if(mode === 'light'){
+    if(mode === 'dark'){
+      setMode('light');
+      document.body.style.backgroundColor = '#F2F2F2';
+    }else{
       setMode('dark');
       document.body.style.backgroundColor = '#28282B';
-    }else{
-      setMode('light');
-      document.body.style.backgroundColor = '#FFF';
     }
   }
 
